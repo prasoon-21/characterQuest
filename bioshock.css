@@ -1,0 +1,347 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Copperplate', 'Georgia', serif;
+    background: linear-gradient(135deg, #0a1015 0%, #0d1a20 50%, #081018 100%);
+    background-attachment: fixed;
+    color: #c8d4d8;
+    line-height: 1.7;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(180, 140, 80, 0.02) 2px, rgba(180, 140, 80, 0.02) 4px),
+        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(80, 140, 160, 0.02) 2px, rgba(80, 140, 160, 0.02) 4px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(180, 140, 80, 0.06) 0%, transparent 30%),
+        radial-gradient(circle at 80% 70%, rgba(60, 120, 140, 0.06) 0%, transparent 40%),
+        radial-gradient(circle at 50% 50%, rgba(120, 90, 60, 0.04) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* --- Intro Section --- */
+.intro-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    z-index: 2;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.main-character-title {
+    font-size: 3.5em;
+    background: linear-gradient(135deg, #d4c4a8 0%, #b8a078 50%, #c8b898 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(180, 140, 80, 0.5);
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+.game-title {
+    font-size: 2em;
+    background: linear-gradient(135deg, #5a9aaa 0%, #3a7a8a 50%, #2a6a7a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.character-name {
+    font-size: 2.5em;
+    background: linear-gradient(135deg, #f0e8d8 0%, #d8c8b0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 12px 0;
+}
+
+.tag-line {
+    font-size: 1.1em;
+    font-style: italic;
+    color: #b8946c;
+    margin: 20px 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.brief-description {
+    font-size: 1.2em;
+    text-align: justify;
+    padding: 25px 30px;
+    background: linear-gradient(135deg, rgba(180, 140, 80, 0.08) 0%, rgba(40, 60, 70, 0.3) 100%);
+    border-left: 5px solid;
+    border-right: 5px solid;
+    border-image: linear-gradient(to bottom, transparent, #b8946c, transparent) 1;
+    border-radius: 4px;
+    box-shadow: 0 0 40px rgba(180, 140, 80, 0.15);
+    line-height: 1.8;
+    color: #d0d8dc;
+}
+
+.intro-image-card {
+    flex: 0 0 400px;
+    position: relative;
+}
+
+.intro-image-card img {
+    width: 100%;
+    border: 3px solid rgba(180, 140, 80, 0.3);
+    border-radius: 4px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.7), 0 0 60px rgba(60, 120, 140, 0.2);
+    filter: sepia(0.15) contrast(1.1);
+}
+
+/* --- Masonry Grid (Column-wise Pinterest Style) --- */
+.masonry-grid {
+    column-count: 3;
+    column-gap: 25px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.card {
+    break-inside: avoid;
+    margin-bottom: 25px;
+    padding: 28px;
+    border-radius: 4px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(180, 140, 80, 0.1);
+    background: rgba(15, 25, 30, 0.85);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: inline-block;
+    width: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(180, 140, 80, 0.2);
+    z-index: 3;
+}
+
+/* Card Variants - Art Deco Bronze/Teal Theme */
+.bg-dark {
+    background: linear-gradient(135deg, rgba(20, 30, 35, 0.92) 0%, rgba(10, 18, 22, 0.96) 100%);
+}
+
+.bg-gradient-1 {
+    background: linear-gradient(135deg, rgba(80, 60, 35, 0.35) 0%, rgba(20, 28, 32, 0.92) 100%);
+    border-top: 2px solid rgba(180, 140, 80, 0.4);
+}
+
+.bg-gradient-2 {
+    background: linear-gradient(135deg, rgba(40, 80, 90, 0.35) 0%, rgba(15, 25, 30, 0.92) 100%);
+    border-top: 2px solid rgba(90, 160, 180, 0.4);
+}
+
+.disaster-card {
+    background: linear-gradient(135deg, rgba(100, 60, 40, 0.4) 0%, rgba(25, 18, 15, 0.92) 100%);
+    border: 1px solid rgba(180, 100, 60, 0.3);
+}
+
+.redemption-card {
+    background: linear-gradient(to bottom right, rgba(30, 50, 55, 0.9), rgba(15, 25, 30, 0.95));
+    border-left: 4px solid #5a9aaa;
+}
+
+.summary-card {
+    background: linear-gradient(135deg, rgba(180, 140, 80, 0.12) 0%, rgba(10, 18, 22, 0.95) 100%);
+    border: 1px solid rgba(180, 140, 80, 0.25);
+    text-align: center;
+}
+
+/* Typography inside cards */
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #d4b080, #b8946c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid rgba(180, 140, 80, 0.25);
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: 1.25em;
+    margin-bottom: 12px;
+    color: #c8a878;
+}
+
+.card p {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 1em;
+    color: #b8c4c8;
+    line-height: 1.75;
+}
+
+.card b {
+    color: #c8a878;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.card ul {
+    margin-left: 10px;
+    list-style: none;
+}
+
+.card ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: #a8b8c0;
+}
+
+.card ul li::before {
+    content: "◈";
+    color: #b8946c;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.88em;
+    font-style: italic;
+    color: #7090a0;
+    display: block;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/* --- Quote Section --- */
+.quote-section {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.quote-section blockquote {
+    font-size: 1.8em;
+    font-style: italic;
+    color: #d4b080;
+    padding: 50px 60px;
+    position: relative;
+    line-height: 1.6;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.quote-section blockquote::before {
+    content: '"';
+    font-size: 5em;
+    color: rgba(180, 140, 80, 0.3);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: Georgia, serif;
+}
+
+.quote-section cite {
+    display: block;
+    margin-top: 25px;
+    font-size: 0.6em;
+    color: #5a9aaa;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- Gallery --- */
+.gallery {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    opacity: 0.75;
+    transition: opacity 0.3s, transform 0.3s;
+    border: 2px solid rgba(180, 140, 80, 0.15);
+    filter: sepia(0.1) contrast(1.05);
+}
+
+.gallery img:hover {
+    opacity: 1;
+    transform: scale(1.04);
+    border-color: #b8946c;
+    box-shadow: 0 0 25px rgba(180, 140, 80, 0.3);
+    z-index: 2;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro-text, .intro-image-card {
+        flex: auto;
+        width: 100%;
+        margin: 0;
+    }
+    .intro-image-card img {
+        max-width: 500px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+    .main-character-title {
+        font-size: 2.5em;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,329 @@
+/* === Spec Ops: The Line - Desert War Theme === */
+/* Color Palette: Sand beige, military olive, blood red, dust brown */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #1a1815 0%, #252018 50%, #1c1a15 100%);
+    color: #d8d0c0;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+/* --- Intro Section --- */
+.intro-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    gap: 60px;
+    align-items: center;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.main-character-title {
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #a08050;
+    margin-bottom: 10px;
+}
+
+.game-title {
+    font-size: 2.5em;
+    background: linear-gradient(90deg, #c8a060, #a08050);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+.character-name {
+    font-size: 4em;
+    color: #e8e0d0;
+    text-shadow: 0 0 40px rgba(160, 128, 80, 0.3);
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+}
+
+.tag-line {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #b05050;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.brief-description {
+    font-size: 1.1em;
+    color: #b8b0a0;
+    line-height: 1.8;
+    border-left: 3px solid #a08050;
+    padding-left: 20px;
+}
+
+.intro-image-card {
+    flex: 0 0 400px;
+}
+
+.intro-image-card img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border: 2px solid rgba(160, 128, 80, 0.4);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(160, 128, 80, 0.15);
+}
+
+/* --- Card Sections (Row-wise Layout) --- */
+.card-section {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    padding: 0 40px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    color: #c8a060;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(160, 128, 80, 0.3);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Flexbox Row Layout */
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    flex: 1 1 300px;
+    padding: 30px;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(160, 128, 80, 0.15);
+    background: rgba(20, 18, 15, 0.92);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(160, 128, 80, 0.15);
+}
+
+/* Card Variants - Desert War Theme */
+.bg-dark {
+    background: linear-gradient(135deg, rgba(22, 20, 18, 0.95) 0%, rgba(15, 13, 12, 0.98) 100%);
+}
+
+.bg-sand {
+    background: linear-gradient(135deg, rgba(100, 80, 50, 0.2) 0%, rgba(20, 18, 15, 0.95) 100%);
+    border-top: 2px solid rgba(180, 150, 100, 0.4);
+}
+
+.bg-blood {
+    background: linear-gradient(135deg, rgba(120, 40, 40, 0.25) 0%, rgba(18, 15, 15, 0.95) 100%);
+    border-top: 2px solid rgba(180, 80, 80, 0.5);
+}
+
+.war-crime-card {
+    background: linear-gradient(135deg, rgba(80, 30, 20, 0.35) 0%, rgba(15, 12, 12, 0.98) 100%);
+    border: 1px solid rgba(200, 80, 60, 0.3);
+    flex: 2 1 500px;
+}
+
+.choice-card {
+    background: linear-gradient(to bottom right, rgba(30, 25, 20, 0.95), rgba(18, 15, 12, 0.98));
+    border-left: 4px solid #a08050;
+    flex: 1 1 220px;
+}
+
+.summary-card {
+    background: linear-gradient(135deg, rgba(160, 128, 80, 0.08) 0%, rgba(15, 13, 12, 0.95) 100%);
+    border: 1px solid rgba(160, 128, 80, 0.2);
+    flex: 1 1 280px;
+}
+
+/* Typography inside cards */
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    background: linear-gradient(90deg, #d0a868, #b08850);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 2px solid rgba(160, 128, 80, 0.25);
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+h4 {
+    font-size: 1.25em;
+    margin-bottom: 12px;
+    color: #c8a060;
+}
+
+.card p {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 1em;
+    color: #c8c0b0;
+    line-height: 1.75;
+}
+
+.card b {
+    color: #c8a060;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1em;
+}
+
+.card ul {
+    margin-left: 10px;
+    list-style: none;
+}
+
+.card ul li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    color: #b8b0a0;
+}
+
+.card ul li::before {
+    content: "▸";
+    color: #a08050;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.88em;
+    font-style: italic;
+    color: #908878;
+    display: block;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+/* --- Quote Section --- */
+.quote-section {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 40px;
+    text-align: center;
+}
+
+.quote-section blockquote {
+    font-size: 1.8em;
+    font-style: italic;
+    color: #c8a060;
+    padding: 50px 60px;
+    position: relative;
+    line-height: 1.6;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.quote-section blockquote::before {
+    content: '"';
+    font-size: 5em;
+    color: rgba(160, 128, 80, 0.25);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-family: Georgia, serif;
+}
+
+.quote-section cite {
+    display: block;
+    margin-top: 25px;
+    font-size: 0.6em;
+    color: #b05050;
+    font-style: normal;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* --- Gallery --- */
+.gallery {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 2px solid rgba(160, 128, 80, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    filter: sepia(10%) contrast(105%);
+}
+
+.gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 35px rgba(160, 128, 80, 0.25);
+    border-color: rgba(200, 160, 100, 0.5);
+    filter: sepia(0%) contrast(110%);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 1200px) {
+    .intro-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brief-description {
+        border-left: none;
+        border-top: 3px solid #a08050;
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .intro-image-card {
+        flex: 0 0 auto;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .character-name {
+        font-size: 2.5em;
+    }
+
+    .card {
+        flex: 1 1 100%;
+    }
+
+    .war-crime-card {
+        flex: 1 1 100%;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .quote-section blockquote {
+        font-size: 1.3em;
+        padding: 30px;
+    }
+}

@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', 'Georgia', serif;
+    background: #0b0c10;
+    background-image:
+        radial-gradient(circle at 50% 50%, rgba(30, 30, 30, 0.8), rgba(10, 10, 10, 1)),
+        url('texture_noise.png');
+    color: #c5c6c7;
+    line-height: 1.6;
+    padding-bottom: 50px;
+}
+
+:root {
+    --text-primary: #e0e0e0;
+    --text-accent: #d4af37;
+    /* Metallic Gold */
+    --bg-card-dark: rgba(20, 24, 28, 0.9);
+    --bg-card-accent: rgba(45, 50, 60, 0.85);
+    --border-color: #4b4e53;
+    --highlight-red: #8a0b0b;
+}
+
+/* Intro Section */
+.intro-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.main-character-title {
+    font-size: 3.5em;
+    text-transform: uppercase;
+    color: #f0f0f0;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.game-title {
+    font-size: 1.8em;
+    color: #d4af37;
+    /* Gold title */
+    border-bottom: 2px solid #d4af37;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.character-name {
+    font-size: 2.5em;
+    background: linear-gradient(90deg, #ffffff, #a0a0a0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
+}
+
+.tag-line {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #b0c4de;
+    /* Light steel blue */
+    margin: 20px 0;
+    border-left: 3px solid #b0c4de;
+    padding-left: 15px;
+}
+
+.brief-description {
+    font-size: 1.1em;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+}
+
+.intro-image-card {
+    flex: 0 0 400px;
+}
+
+.intro-image-card img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+    /* faint gold glow */
+    border: 2px solid #555;
+    filter: contrast(1.2) saturation(0.8);
+}
+
+/* Masonry Layout */
+.masonry-grid {
+    column-count: 3;
+    column-gap: 25px;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.card {
+    break-inside: avoid;
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 4px;
+    background: var(--bg-card-dark);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #ccc;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    border-color: var(--text-accent);
+}
+
+/* Card Themes */
+.bg-dark {
+    /* distinct standard card */
+    background: linear-gradient(145deg, rgba(30, 30, 35, 0.9), rgba(15, 15, 20, 0.95));
+}
+
+.bg-accent-wolf {
+    border-left: 4px solid var(--text-accent);
+    background: linear-gradient(135deg, rgba(40, 40, 45, 0.9), rgba(20, 20, 25, 0.95));
+}
+
+.bg-accent-blood {
+    border-left: 4px solid var(--highlight-red);
+    background: linear-gradient(135deg, rgba(50, 20, 20, 0.7), rgba(10, 5, 5, 0.95));
+}
+
+.difficulty-card {
+    background: #1a0505;
+    border: 1px solid #500;
+}
+
+.summary-card {
+    text-align: center;
+    border: 2px solid var(--text-accent);
+    background: rgba(10, 10, 10, 0.95);
+}
+
+/* Typography inside cards */
+.card h3 {
+    margin-bottom: 15px;
+    color: var(--text-accent);
+    font-size: 1.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    padding-bottom: 5px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    color: #ececec;
+    font-size: 1.2em;
+}
+
+.card p {
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    text-align: left;
+}
+
+.card b,
+.card u {
+    color: #fff;
+    text-decoration: none;
+}
+
+.card ul {
+    list-style: none;
+    margin-left: 10px;
+}
+
+.card ul li {
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    color: #bbb;
+}
+
+.card ul li::before {
+    content: "⚔";
+    /* Sword icon bullet */
+    position: absolute;
+    left: 0;
+    color: var(--text-accent);
+    font-size: 0.8em;
+    top: 2px;
+}
+
+/* Gallery */
+.gallery {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 4px;
+    filter: sepia(0.3) contrast(1.1) brightness(0.7);
+    transition: all 0.4s ease;
+    border: 1px solid #333;
+}
+
+.gallery img:hover {
+    filter: none;
+    transform: scale(1.03);
+    border-color: var(--text-accent);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+    z-index: 10;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .masonry-grid {
+        column-count: 2;
+    }
+
+    .intro-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .masonry-grid {
+        column-count: 1;
+    }
+
+    .intro-container {
+        padding: 20px;
+    }
+}
