@@ -81,9 +81,7 @@ Join thousands of fellow gamers who share your passion. Discuss theories, share 
 
 ## 📸 Preview
 
-```
-(./pictures/Screenshot 2026-01-01 031552.png)
-```
+<img width="1901" height="1048" alt="Screenshot 2026-01-01 031552" src="https://github.com/user-attachments/assets/c362a688-b152-49a6-97f7-f7866f49fc02" />
 
 ---
 
