@@ -82,7 +82,9 @@ Join thousands of fellow gamers who share your passion. Discuss theories, share 
 ## 📸 Preview
 
 ```
-https://file+.vscode-resource.vscode-cdn.net/c%3A/Users/praso/OneDrive/Pictures/Screenshots/Screenshot%202026-01-01%20031552.png?version%3D1767217580703
+
+<img width="1901" height="1048" alt="Screenshot 2026-01-01 031552" src="https://github.com/user-attachments/assets/c362a688-b152-49a6-97f7-f7866f49fc02" />
+
 ```
 
 ---
